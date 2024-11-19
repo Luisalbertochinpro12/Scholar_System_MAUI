@@ -30,6 +30,7 @@ Por último, el botón editar, si lo presionamos nos pedirá el nombre nuevo que
 Para despues pedirnos el apellido <br>
 ![image](https://github.com/user-attachments/assets/3350c80c-7d0e-4d1f-9dfb-8cf67fc677e0) <br>
 Si se realiza con exito el cambio, veremos esta pestaña <br>
-![image](https://github.com/user-attachments/assets/bc0130d0-e2a2-4151-b3a1-2a8dabe4191f) <br>
+![image](https://github.com/user-attachments/assets/b263b861-7cb9-4fec-a744-f8ba349f7fd4)
+ <br>
 
 Ese es el funcionamiento básico de la aplicación.
