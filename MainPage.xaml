@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Scholar_System.MainPage">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Button
+                Margin=" 10, 20"
+                Clicked="Button_Clicked"
+                Text="Agregar Personas"/>
+            <CollectionView ItemsSource="{Binding Personas}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout>
+                            <Label Text="Nombre:" Margin="10, 20" FontSize="20" TextColor="Black"/>
+                            <Label Text="{Binding nombre}" Margin="10, 20" FontSize="20" FontAttributes="Bold" TextColor="Black"/>
+                            <Label Text="Apellido:" Margin="10, 20" FontSize="20" TextColor="Black"/>
+                            <Label Text="{Binding apellido}" Margin="10, 20" FontSize="20" FontAttributes="Bold" TextColor="Black"/>
+                            <Button
+                                Clicked="Delete_Person"
+                                Text="- Eliminar"
+                                BackgroundColor="#D4D44D"
+                                HorizontalOptions="End"
+                                Margin="10,10"
+                                CommandParameter="{Binding id}"
+                                >
+                            </Button>
+                            <Button
+                                Text=" : Editar"
+                                Clicked="Edit_Person"
+                                BackgroundColor="#A50C0C"
+                                Margin="10,10"
+                                CommandParameter="{Binding id}">
+                            </Button>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

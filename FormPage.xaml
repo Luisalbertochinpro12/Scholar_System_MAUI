@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Scholar_System.FormPage"
+             Title="FormPage">
+    <StackLayout>
+        <Button
+            Text="Regresar"
+            Clicked="Button_Clicked"
+            HorizontalOptions="Start"
+            Margin="20,10"/>
+        <Label
+            TextColor="Black"
+            Text="Agregar Personas"
+            HorizontalOptions="Center"
+            FontSize="30"
+            Margin="0, 20"/>
+        <Grid
+            BackgroundColor="Purple"
+            Padding="10, 20"
+            HorizontalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label 
+                Text="Nombre de la persona:"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                Grid.Column="0"
+                Grid.Row="0"/>  
+            <Entry 
+                x:Name="userName"
+                BackgroundColor="White"
+                VerticalOptions="Center"
+                Margin="10, 0, 10, 0"
+                WidthRequest="180"
+                Grid.Column="1"
+                Grid.Row="0"/>
+            <Label 
+                Text="Apellido:"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                Grid.Column="0"
+                Grid.Row="1"/>
+            <Entry 
+                x:Name="lastName"
+                BackgroundColor="White"
+                VerticalOptions="Center"
+                Margin="10, 0, 10, 0"
+                WidthRequest="180"
+                Grid.Column="1"
+                Grid.Row="1"/>
+            <Label 
+                Text="Sexo:"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                Grid.Column="0"
+                Grid.Row="2"/>
+            <HorizontalStackLayout
+                Grid.Column="1"
+                Grid.Row="2"
+                VerticalOptions="Center">
+                <RadioButton 
+                    Content="Hombre" Margin="10, 0, 10, 0" x:Name="male"/>
+                <RadioButton 
+                    Content="Mujer" Margin="10, 0, 10, 0" x:Name="female"/>
+            </HorizontalStackLayout>
+            <Label
+                FontSize="Medium"
+                FontAttributes="Bold"
+                Text="Fecha de nacimiento:"
+                VerticalOptions="Center"
+                Grid.Column="0"
+                Grid.Row="3"/>  
+            <DatePicker
+                x:Name="dateBth"
+                VerticalOptions="Center"
+                Format="yyyy/mm/dd"
+                Grid.Column="1"
+                Grid.Row="3"
+                WidthRequest="180"
+                BackgroundColor="White"/>
+            <Label 
+                FontSize="Medium"
+                FontAttributes="Bold"
+                Text="Rol:"
+                VerticalOptions="Center"
+                Grid.Column="0"
+                Grid.Row="4"/>
+            <Entry
+                VerticalOptions="Center"
+                Grid.Column="1"
+                Grid.Row="4"
+                WidthRequest="180"
+                BackgroundColor="White"
+                x:Name="idRol"/>
+            <Button
+                Clicked="AddPerson"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center"
+                Text="Agregar"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                WidthRequest="180"
+                Margin="0, 20"/>
+        </Grid>
+        
+    </StackLayout>
+</ContentPage>
