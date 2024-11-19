@@ -50,7 +50,7 @@ public partial class FormPage : ContentPage
         var response = await _httpClient.PostAsync("https://fi.jcaguilar.dev/v1/escuela/persona", content);
         if (response.IsSuccessStatusCode)
         {
-            Debug.WriteLine("Persona añadida");
+            await DisplayAlert("Success", "Se agregó correctamente la persona", "Continuar");
         } else
         {
             Debug.WriteLine(response.StatusCode);
